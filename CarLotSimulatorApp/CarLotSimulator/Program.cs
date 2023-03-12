@@ -28,6 +28,8 @@ namespace CarLotSimulator
             ModelT.MakeHonkNoise();
 
             Lot.CarLot.Add(ModelT);
+            Carlot.addCar();
+            Console.WriteLine($"We now have {Carlot.numberOfCars} on the lot!");
 
 
             Car junker = new Car() { Make = "unknown", Model = "Can't tell", Year = 1954, engineNoise = "BOOM", honkNoise = "bzzz", isDriveable = false };
@@ -35,12 +37,16 @@ namespace CarLotSimulator
             junker.MakeHonkNoise();
 
             Lot.CarLot.Add(junker);
+            Carlot.addCar();
+            Console.WriteLine($"We now have {Carlot.numberOfCars} on the lot!");
 
             Car Camaro = new Car("Chevrolet", "Camaro", 2012, "Vrooooom", "Brrrrrrrr", true);
             Camaro.MakeEngineNoise();
             Camaro.MakeHonkNoise();
 
             Lot.CarLot.Add(Camaro);
+            Carlot.addCar();
+            Console.WriteLine($"We now have {Carlot.numberOfCars} on the lot!");
 
             //Set the properties for each of the cars
             //Call each of the methods for each car
